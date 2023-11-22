@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel App</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+  </head>
+  <body>
+    <div class="level animate__animated animate__rubberBand">
+        <section>
+            <div class="content">
+            <h2>Levels </h2>
+            <h2>Levels </h2>
+            </div>
+        </section>
+    </div>
+
+
+        <div class="container">
+
+            <div class="spinBtn">Spin</div>
+
+                <div class="wheel">
+
+                    <div class="number" style="--i:1;--clr:#77BC46;">
+
+                        <span>EASY</span></div>
+
+                    <div class="number" style="--i:2;--clr:#064789;">
+
+                        <span>HARD</span></div>
+
+                    <div class="number" style="--i:3;--clr:#46853D;">
+
+                        <span>EASY</span></div>
+
+                    <div class="number" style="--i:4;--clr:#8AD0F3;">
+
+                        <span>HARD</span></div>
+
+                    <div class="number" style="--i:5;--clr:#77BC46 ;">
+
+                        <span>EASY</span></div>
+
+                    <div class="number" style="--i:6;--clr:#064789;">
+
+                        <span>HARD</span></div>
+
+                    <div class="number" style="--i:7;--clr:#46853D;">
+
+                        <span>EASY</span></div>
+
+                    <div class="number" style="--i:8;--clr:#8AD0F3 ;">
+
+                        <span>HARD</span></div>
+
+                </div>
+
+            <div id="logo">
+                <img src="logo jeu.png" alt="LogoGreenDesign"  width="150" />
+            </div>
+
+        </div>
+
+   
+
+    <script>
+
+        let wheel = document.querySelector('.wheel');
+
+        let spinBtn = document.querySelector('.spinBtn');
+
+        let value = Math.ceil(Math.random() * 3600);
+
+
+
+        spinBtn.onclick = function(){
+
+            wheel.style.transform = "rotate(" + value + "deg)"
+
+
+
+            value += Math.ceil(Math.random() * 3600);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
